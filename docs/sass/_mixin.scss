@@ -1,0 +1,11 @@
+@mixin flex-container($js){
+    display: flex;
+    justify-content: $js;
+}
+
+@mixin animation-container($name, $time-func, $duration, $iteration-count){
+    animation-name: $name;
+    animation-timing-function: $time-func;
+    animation-duration: $duration;
+    animation-iteration-count: $iteration-count;
+}

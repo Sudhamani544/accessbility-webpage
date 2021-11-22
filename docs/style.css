@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+html{
+    margin:0px;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #fdefef;
+}
+ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color:white;
+}
+h2{
+    text-align: center;
+}
+section{
+	margin-top: 3rem;
+	margin-bottom: 5rem;
+}
+/* Navigation menu */
+.navbar{
+	background-color: black;
+	display:flex;
+	justify-content: space-between;
+	padding: 8px;
+	color:white;
+}
+.navmenu{
+    display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width:40%
+}
+/* main section */
+.mainsection, .servicedisplay {
+	display: flex;
+  	justify-content: space-around;
+    margin-top: 3rem;
+	margin-bottom: 5rem;
+}
+.article-main{
+    width:90%;
+    margin-top: 2rem;
+	margin-left: 2rem;
+}
+/* client display */
+.article-client{
+    text-align:center;
+	border: 1px solid black;
+	margin:2em;
+    padding:2em;
+}
+.card{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+}
+
+/* products display */
+.product{
+	display:flex;
+	justify-content: space-around;
+	font-size: 30px;
+	border: 1px solid black;
+	padding:1.2em;
+	margin-top: 2em;;
+}
+
+/* services display */
+.article-services{
+    text-align: left; 
+    margin-top:4em; 
+    padding-left: 1em;
+    margin-top:2rem;
+}
+
+.navfooter{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width:6%;
+}
+
+/* blogpost page */
+.blogheader{
+	text-align: center;
+	color:tomato;
+}
+.blogtitle{
+	width: 20%;
+}
+.blogpara{
+	width:80%;
+}
+div.blogpara > a{
+	color:lightcoral;
+	font-style: italic;
+	
+}
+
+/* single blogpost */
+.singlepost, .contactform{
+	text-align:center;
+}
+/*to display menu icon for mobile device*/
+@media screen and (max-width: 767px) {
+	.col-md-12{
+		width: 100%;
+ 		text-align: center;
+		border: 1px solid black;
+	}
+}

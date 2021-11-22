@@ -1,0 +1,140 @@
+@use 'mixin';
+@use 'variables';
+
+html{
+    margin:0px;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: variables.$body-clr;
+}
+ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color:variables.$white;
+}
+h2{
+    text-align: center;
+}
+section{
+	margin-top: 3rem;
+	margin-bottom: 5rem;
+}
+// navigation menu header & footer
+.navbar{
+	background-color: variables.$black;
+	@include mixin.flex-container(space-between);
+	padding: 8px;
+	color:variables.$white;
+    &__navmenu{
+        @include mixin.flex-container(space-between);
+        width:45%
+    }
+    &__navfooter{
+    	@include mixin.flex-container(space-around);
+        width:6%;
+    }
+}
+
+//mainsection, service section and blogpost page section 
+.mainsection{
+	@include mixin.flex-container(space-around);
+    margin-top: 3rem;
+	margin-bottom: 5rem;
+    &__article-main{
+        width:90%;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    &__article-services{
+        text-align: left; 
+        margin-top:4em; 
+        padding-left: 1em;
+        margin-top:2rem;
+    }
+    &__blogtitle{
+        width: 20%;
+    }
+    &__blogpara{
+        width:80%;  
+    }
+    &__blogpara{
+        a{
+        color: variables.$blue;
+        font-style: italic;
+        }
+    }
+}
+
+//blogpost page 
+.blogheader{
+	text-align: center;
+}
+
+
+//  client display 
+.card{
+	@include mixin.flex-container(space-around);
+	text-align: center;
+
+    &__article-client{
+        text-align:center;
+        border: 1px solid variables.$black;
+        margin:2em;
+        padding:2em;
+    }
+}
+
+//products display
+.product{
+	@include mixin.flex-container(space-around);
+	font-size: 30px;
+	border: 1px solid variables.$black;
+	padding:1.2em;
+	margin-top: 2em;;
+}
+
+/* single blogpost */
+.singlepost, .contactform{
+	text-align:center;
+}
+
+// animation
+.svg-img{
+    width: 100%;
+    height: 90%;
+}
+
+#lflower,#mflower,#rflower {
+    @include mixin.animation-container(changecolor, linear, 2s, infinite);
+    transform-origin: center;
+    transform-box: fill-box;    
+}
+@keyframes changecolor {
+    to{
+        transform: rotate(180deg);
+        fill:variables.$green;
+    }
+}
+
+#middle, #right, #left{
+    @include mixin.animation-container(changecolor1, linear, 2s, infinite);
+}
+@keyframes changecolor1 {
+    to{
+        fill:variables.$orangered;
+    }
+}
+
+#box{
+    @include mixin.animation-container(boxcolor, linear, 2s, infinite);
+}
+@keyframes boxcolor{
+    to{
+        fill:variables.$red;
+    }
+}
